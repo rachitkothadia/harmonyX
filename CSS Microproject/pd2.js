@@ -1,0 +1,215 @@
+console.log("Welcome to HarmonyX");
+
+// Initialize the Variables
+let songIndex = 0;
+let audioElement = new Audio('songs/1.mp3');
+let masterPlay = document.getElementById('masterPlay');
+let myProgressBar = document.getElementById('myProgressBar');
+let gif = document.getElementById('gif');
+let masterSongName = document.getElementById('masterSongName');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
+
+// New elements for the song card
+let songCard = document.getElementById('songCard');
+let songCardImage = document.getElementById('songCardImage');
+let songCardTitle = document.getElementById('songCardTitle');
+let songCardArtist = document.getElementById('songCardArtist');
+
+let songs = [
+    {songName:"@NOTYOURTYPE Squid Game Goes Desi! | Netflix India", filePath: "pd2/1.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8aa9d24c81a4cf7b7043487fb7"},
+    {songName: "Orignal Money Heist Or A Rip Off?", filePath: "pd2/2.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8a06795d0604449dc581346f2d"},
+    {songName: "Indian Schools,Summer Holidays and Christmas", filePath: "pd2/3.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8a01c782ddd2060075735ccc07"},
+    {songName: "Every Indian Youtuber Ever", filePath: "pd2/4.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8a83934b7b7efe3fe6b7522305"},
+    {songName: "Every Indian Trip Ever-My first animated vlog!", filePath: "pd2/5.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8aa50ece5313effc3b1a68c496"},
+    {songName: " Every Indian College|ft.Indian Hostels And Students", filePath: "pd2/6.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8ad6bbbe82b2cd330c07db20fa"},
+    {songName: "Teenage Problems & Indian Parents", filePath: "pd2/7.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8af94788251a97ed35c6d01628"},
+    {songName: "Types Of Indian Cartoons|ft Childhood memories", filePath: "pd2/8.mp3", coverPath: "https://i.scdn.co/image/ab6765630000ba8a451e7cd5e6acfea02fe5aa29"},
+]
+
+// Populate song items with data
+function populateSongItems() {
+    songItems.forEach((element, i) => { 
+        element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
+        element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+    });
+}
+populateSongItems();
+
+// Function to format time in mm:ss
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+// Function to update the song durations in the UI
+function updateSongDurations() {
+    songItems.forEach((element, i) => {
+        const audio = new Audio(songs[i].filePath);
+        audio.addEventListener('loadedmetadata', () => {
+            const duration = formatTime(audio.duration);
+            const durationElement = element.querySelector('.songDuration');
+            if (durationElement) {
+                durationElement.innerText = duration;
+            }
+        });
+    });
+}
+
+// Call the function to update song durations when the page loads
+updateSongDurations();
+
+// Handle play/pause click
+masterPlay.addEventListener('click', () => {
+    if (audioElement.paused || audioElement.currentTime <= 0) {
+        audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        gif.style.opacity = 1;
+    } else {
+        audioElement.pause();
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
+        gif.style.opacity = 0;
+    }
+});
+
+// Listen to Events for time updates and seekbar
+audioElement.addEventListener('timeupdate', () => { 
+    if (audioElement.duration) {
+        let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100); 
+        myProgressBar.value = progress;
+    }
+});
+
+myProgressBar.addEventListener('change', () => {
+    if (audioElement.duration) {
+        audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
+    }
+});
+
+const makeAllPlays = () => {
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    });
+}
+
+const highlightCurrentSong = () => {
+    // Remove 'playing' class from any currently playing song
+    const currentlyPlaying = document.querySelector('.playing');
+    if (currentlyPlaying) {
+        currentlyPlaying.classList.remove('playing');
+        currentlyPlaying.querySelector('.songName').style.color = ''; // reset to default color
+    }
+
+    // Add 'playing' class to the current song item
+    const currentSongItem = songItems[songIndex];
+    currentSongItem.classList.add('playing');
+    currentSongItem.querySelector('.songName').style.color = '#d1b278'; // highlight with gray color
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element, i) => {
+    element.addEventListener('click', (e) => { 
+        makeAllPlays();
+        songIndex = i;
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src = songs[songIndex].filePath;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+
+        // Update song card with selected song information
+        songCardImage.src = songs[songIndex].coverPath;
+        songCardTitle.innerText = songs[songIndex].songName;
+
+        // Show the card
+        songCard.classList.remove('hidden');
+
+        // Highlight the current song
+        highlightCurrentSong();
+    });
+});
+
+document.getElementById('next').addEventListener('click', () => {
+    if (songIndex >= songs.length - 1) {
+        songIndex = 0;
+    } else {
+        songIndex += 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+    // Update song card with selected song information
+    songCardImage.src = songs[songIndex].coverPath;
+    songCardTitle.innerText = songs[songIndex].songName;
+
+    // Show the card
+    songCard.classList.remove('hidden');
+
+    // Highlight the current song
+    highlightCurrentSong();
+});
+
+document.getElementById('previous').addEventListener('click', () => {
+    if (songIndex <= 0) {
+        songIndex = songs.length - 1;
+    } else {
+        songIndex -= 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+    // Update song card with selected song information
+    songCardImage.src = songs[songIndex].coverPath;
+    songCardTitle.innerText = songs[songIndex].songName;
+
+    // Show the card
+    songCard.classList.remove('hidden');
+
+    // Highlight the current song
+    highlightCurrentSong();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the search bar and song list items
+    const searchBar = document.querySelector('.search-box');
+
+    // Add an event listener to the search bar
+    searchBar.addEventListener('input', function(e) {
+        const searchText = e.target.value.toLowerCase();
+
+        songItems.forEach(function(item) {
+            const songTitle = item.querySelector('.songName').textContent.toLowerCase(); // Adjusted to '.songName' class
+
+            // Check if the song title contains the search text
+            if (songTitle.includes(searchText)) {
+                item.style.display = ''; // Show the song item
+            } else {
+                item.style.display = 'none'; // Hide the song item
+            }
+        });
+    });
+});
+function navigateToHome() {
+    // Show the loader
+    document.getElementById('loader').classList.remove('hidden');
+    
+    // Simulate a page transition with a timeout (e.g., 1 second) to hide the loader
+    // Adjust the duration as needed to match the actual loading time
+    setTimeout(() => {
+      window.location.href = 'harmonyX.html';
+    }, 2500); // 1000 milliseconds = 1 second
+  }

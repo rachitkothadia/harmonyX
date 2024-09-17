@@ -1,0 +1,134 @@
+.login-container
+{
+  background-image: linear-gradient(#00000049, #00000049), url('login-bg.jpg');
+  height: 100vh;
+  background-size: cover;
+}
+
+.logo
+{
+  padding-top: 120px;
+  padding-left: 180px;
+}
+
+#typing-text {
+  position: relative;
+  background: linear-gradient(to right, rgb(177, 116, 3), rgb(255, 181, 44), rgb(199, 243, 5), rgb(144, 233, 0), rgb(48, 151, 0), rgb(20, 148, 20), rgb(21, 172, 21), rgb(21, 160, 21)); /* Gradient with multiple colors */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+#typing-text::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background-color: #ffffff;
+  animation: blink 1s infinite;
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-animated-para {
+  font-family: "Sofadi One";
+  font-size: 70px;
+  text-align: center;
+  width: 500px;
+  margin-left: 150px;
+  margin-top: 80px;
+  
+}
+
+
+.login-user-container
+{
+  background-color: rgba(148, 146, 146, 0.329);
+  border: 1px solid  rgb(10, 53, 12);
+  border-radius: 8px;
+  margin-top: 120px;
+  margin-left: 90px;
+  width: 500px;
+  height: 430px;
+}
+
+.pfp
+{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 1px dashed rgb(83, 82, 82);
+}
+
+.login-button
+{
+  background-color: #347D3B;
+  color: rgb(214, 210, 210);
+  border-width: 0px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: Josefin Sans; 
+}
+
+.switch-account-para
+{
+  margin-top: 20px;
+  color: #0056B3;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.switch-account-para:hover
+{
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+.switch-account-user-container
+{
+  background-color: rgba(148, 146, 146, 0.329);
+  border: 1px solid  rgb(10, 53, 12);
+  border-radius: 8px;
+  padding: 5px;
+  width: 500px;
+}
+
+.pfp-mayank
+{
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: 1px dashed rgb(83, 82, 82);
+}
+
+.switch-account-user-name
+{
+  font-size: 30px;
+  font-family: Josefin Sans;
+  margin-top: 17px;
+}
+
+.switch-account-user-container:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  background-color: rgba(148, 146, 146, 0.6);
+  border: 3px solid rgb(7, 66, 12);
+}
+
+.modal-dialog {
+  max-width: 50%;
+}

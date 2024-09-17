@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harmonyX</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="harmonyX.css">
+    <link rel="icon" href="https://res.cloudinary.com/dwene4tht/image/upload/v1722960630/harmonyX_logo_efshso.png" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- Home Page Starts  -->
+    <div id="section-home-page">
+        <!-- Quick Nav Bar Starts -->
+        <div  class=" harmony-container-navbar d-flex flex-row ">
+            <img src="harmonyX_logo.png" width="60px" height="60px" style="margin-left: 5px; margin-top: 5px;"/>
+            <img src="harmonyX_TEXT_logo.png" height="55px" style="margin-top: 7px;"/>
+            <div class="icon-div d-flex flex-row mr-3">
+                <i class="icon fa-solid fa-xl fa-house"></i>
+                <h1 class=" quick-head ml-2" onclick="window.location.href='harmonyX.html'">HOME</h1>
+            </div>
+
+            <div class="icon-div d-flex flex-row mr-3" onclick="display('section-explore-premium')">
+                <i class="icon fa-brands fa-web-awesome fa-lg"></i>
+                <h1 class=" quick-head ml-2" style="width: 190px;">EXPLORE PREMIUM</h1>
+            </div>
+            <div class="search-box-card">
+                <input class="search-box"  type="text" placeholder="Search">
+            </div>  
+            <div class="profile">
+                <div class="profile-icon-power" onclick="window.location='Login.html'">
+                    <i class=" fa-solid fa-2xl fa-power-off"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Nav Bar Ends -->
+        <!--  Home Page Starts -->
+        <div class="harmony-container">
+            <!-- Trending Playlist Started -->
+            <div class="home-page-card">
+                <div class="d-flex flex-row mb-2 justify-content-between">
+                    <h1 class="home-page-head">Trending Playlists</h1>
+                    <button onclick="display('section-trending-playlists-see-all')" class="see-all-button">See All</button>
+                </div>
+                <div class="d-flex flex-row ">
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723178779/yaari_jukebox_fnd0u0.png" class="song-podcast-images" onclick="window.location.href='p1.html'">
+                        <h1 class="song-podcast-image-head" onclick="window.location.href='p1.html'">Yaari Jukebox</h1>
+                        <p class="song-podcast-image-para">Celebrating Friendship with...</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723185762/BFF_machi_r5bklr.png" class="song-podcast-images" onclick="window.location.href='p2.html'">
+                        <h1 class="song-podcast-image-head">BFF Machi</h1>
+                        <p class="song-podcast-image-para">En Uyir Natpe</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723186035/chill_instrumental_beats_x81osg.png"  class="song-podcast-images" onclick="window.location.href='p3.html'"/>
+                        <h1 class="song-podcast-image-head">Chill Instrumental Beats</h1>
+                        <p class="song-podcast-image-para">Instrumental Beats to chill...</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190673/chillhop_ejlmjs.png" class="song-podcast-images" onclick="window.location.href='p4.html'">
+                        <h1 class="song-podcast-image-head">Chillhop</h1>
+                        <p class="song-podcast-image-para">Blissed out beats and head... </p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190672/lofi_Garden_qs1nof.png"  class="song-podcast-images" onclick="window.location.href='p5.html'">
+                        <h1 class="song-podcast-image-head">Lofi Garden</h1>
+                        <p class="song-podcast-image-para">beats + birds = <3</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Trending Playlist Ended -->
+            <!-- Trending Podcast Started -->
+            <div class="home-page-card">
+                <div class="d-flex flex-row mb-2 justify-content-between">
+                    <h1 class="home-page-head">Trending Podcast</h1>
+                    <button class="see-all-button" onclick="display('section-trending-podcast-see-all')">See All</button>
+                </div>
+                <div class="d-flex flex-row ">
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Raj_Shamani_s_Figuring_Out_mtvhxy.png" class="song-podcast-images" onclick="window.location.href='pd1.html'"/>
+                        <h1 class="song-podcast-image-head">Raj Shamani's Figuring Out</h1>
+                        <p class="song-podcast-image-para">Raj Shamani</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/Not_your_Type_tmu5qg.png" class="song-podcast-images" onclick="window.location.href='pd2.html'"/>
+                        <h1 class="song-podcast-image-head">Not Your Type</h1>
+                        <p class="song-podcast-image-para">Not Your Type</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/Indian_Murder_Mystery_dgseis.png"  class="song-podcast-images" onclick="window.location.href='pd3.html'"/>
+                        <h1 class="song-podcast-image-head">Indian Murder Mystery</h1>
+                        <p class="song-podcast-image-para">Red FM</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/Nitish_Rajput_Podcast_vl5i1v.png" class="song-podcast-images" onclick="window.location.href='pd4.html'">
+                        <h1 class="song-podcast-image-head">Nitish Rajput Podcast</h1>
+                        <p class="song-podcast-image-para">Team Nitish Rajput</p>
+                    </div>
+                    <div class="song-podcast-card">
+                        <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337437/Chanakya_Neeti-Hindi-Complete_atkunh.png"  class="song-podcast-images" onclick="window.location.href='pd5.html'">
+                        <h1 class="song-podcast-image-head">Chanakya Neeti</h1>
+                        <p class="song-podcast-image-para">Vishal Shah</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Trending Podcast Ended -->
+        </div>
+    </div>
+    <!-- Home Page Ends -->
+    <!-- Trending Playlist Starts -->
+    <div id="section-trending-playlists-see-all">
+    
+        <!-- Quick Nav Bar Starts -->
+        <div  class=" harmony-container-navbar d-flex flex-row ">
+            <img src="harmonyX_logo.png" width="60px" height="60px" style="margin-left: 5px; margin-top: 5px;"/>
+            <img src="harmonyX_TEXT_logo.png" height="55px" style="margin-top: 7px;"/>
+            <div class="icon-div d-flex flex-row mr-3">
+                <i class="icon fa-solid fa-xl fa-house"></i>
+                <h1 class=" quick-head ml-2" onclick="window.location.href='harmonyX.html'">HOME</h1>
+            </div>
+
+            <div class="icon-div d-flex flex-row mr-3" onclick="display('section-explore-premium')">
+                <i class="icon fa-brands fa-web-awesome fa-lg"></i>
+                <h1 class=" quick-head ml-2" style="width: 190px;">EXPLORE PREMIUM</h1>
+            </div>
+            <div class="search-box-card">
+                <input class="search-box"  type="text" placeholder="Search">
+            </div>  
+            <div class="profile">
+                <div class="profile-icon-power" onclick="window.location='Login.html'">
+                    <i class=" fa-solid fa-2xl fa-power-off"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Nav Bar Ends -->
+        <!-- Trending Playlist Cards Starts -->
+        <div class="harmony-container">
+            <div class=" back-icon d-flex flex-row justify-content-start">
+                <div class="mb-5">
+                    <i onclick="display('section-home-page')" class="fa-solid fa-xl fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="trending-playlist-card">
+                <h1 class="home-page-head">Trending Playlist</h1>
+                <div class="container"></div>
+                    <div class="row">
+                        <div class="col-md-2 mt-5">
+                        </div>
+                        <div class="col-md-5 mt-5">
+                            <div class="trending-playlist-short-card d-flex flex-row" >
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723178779/yaari_jukebox_fnd0u0.png"  class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head"  onclick="window.location.href='p1.html'">Yaari Jukebox</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723186035/chill_instrumental_beats_x81osg.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='p3.html'">Chill Instrumental Beats</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190672/lofi_Garden_qs1nof.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='p5.html'">Lofi Garden</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190671/Wholesome_Songs_gubvor.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Wholesome Songs</h1>
+                                    <p class="trending-playlist-short-para">Your Playlist</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190668/Songs_for_crush_lkrozz.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Songs for Crush</h1>
+                                    <p class="trending-playlist-short-para">Kriti ♥</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190667/Sleep_Playlist_ndrvul.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Sleep Playlist</h1>
+                                    <p class="trending-playlist-short-para">ispytunes</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190664/Top_english_Songs_dp4i2b.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Top English Songs</h1>
+                                    <p class="trending-playlist-short-para">Nishu 🥀🌙</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190663/songs_that_feel_like_hug_dbi1jd.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Songs that feel like hug</h1>
+                                    <p class="trending-playlist-short-para">alexis</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190658/Sluttiest_songs_lyfljs.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Sluttiest Songs</h1>
+                                    <p class="trending-playlist-short-para">Mikay 🐣</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 mt-5 ">
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723185762/BFF_machi_r5bklr.png" class="trending-playlist-short-image">
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='p2.html'">BFF Machi</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190673/chillhop_ejlmjs.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='p4.html'">ChillHop</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190671/Best_Playlist_for_Car_Driving_d8dxgp.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Best Playlist for Cars</h1>
+                                    <p class="trending-playlist-short-para">irfan Gamer</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190669/Random_hindi_PLaylist_kl5d88.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Random Hindi Playlist</h1>
+                                    <p class="trending-playlist-short-para">Kaifee Haider</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190667/Romantic_Playlist_optrlp.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Romantic Playlist</h1>
+                                    <p class="trending-playlist-short-para">Rehan Sayyed</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190665/Arjit_singh_Sad_Songs_yds4ol.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Arjit Singh Sad Songs</h1>
+                                    <p class="trending-playlist-short-para">Divya Patil</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190663/Trending_Phonk_fpubni.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Trending Phonk Songs</h1>
+                                    <p class="trending-playlist-short-para">officialwnorg17</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190660/top_marathi_songs_buovir.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Top Marathi Songs</h1>
+                                    <p class="trending-playlist-short-para">Anya</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723190658/Pov_you_are_in_Love_eymirm.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Pov: You are in Love</h1>
+                                    <p class="trending-playlist-short-para">nikki</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Trending Playlist Cards Ends -->
+        </div>
+        <!-- Trending Playlist Ends -->
+        <!-- Trending Podcast Starts -->
+    </div>
+    <div id="section-trending-podcast-see-all">
+        <!-- Quick Nav Bar Starts -->
+        <div  class=" harmony-container-navbar d-flex flex-row ">
+            <img src="harmonyX_logo.png" width="60px" height="60px" style="margin-left: 5px; margin-top: 5px;"/>
+            <img src="harmonyX_TEXT_logo.png" height="55px" style="margin-top: 7px;"/>
+            <div class="icon-div d-flex flex-row mr-3">
+                <i class="icon fa-solid fa-xl fa-house"></i>
+                <h1 class=" quick-head ml-2" onclick="window.location.href='harmonyX.html'">HOME</h1>
+            </div>
+
+            <div class="icon-div d-flex flex-row mr-3" onclick="display('section-explore-premium')">
+                <i class="icon fa-brands fa-web-awesome fa-lg"></i>
+                <h1 class=" quick-head ml-2" style="width: 190px;">EXPLORE PREMIUM</h1>
+            </div>
+            <div class="search-box-card">
+                <input class="search-box"  type="text" placeholder="Search">
+            </div>  
+            <div class="profile">
+                <div class="profile-icon-power" onclick="window.location='Login.html'">
+                    <i class=" fa-solid fa-2xl fa-power-off"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Nav Bar Ends -->
+        <!-- Trending Playlist Cards Starts -->
+         <div class="harmony-container">
+
+            <div class=" back-icon d-flex flex-row justify-content-start">
+                <div class="mb-5">
+                    <i onclick="display('section-home-page')" class="fa-solid fa-xl fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="trending-playlist-card">
+                <h1 class="home-page-head">Trending Podcast</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 mt-5">
+                        </div>
+                        <div class="col-md-5 mt-5">
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Raj_Shamani_s_Figuring_Out_mtvhxy.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='pd1.html'">Figuring Out</h1>
+                                    <p class="trending-playlist-short-para">Raj Shamani</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/Indian_Murder_Mystery_dgseis.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='pd3.html'">Indian Murder Mystery</h1>
+                                    <p class="trending-playlist-short-para">Red Fm</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337437/Chanakya_Neeti-Hindi-Complete_atkunh.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='pd5.html'">Chanakya Neeti</h1>
+                                    <p class="trending-playlist-short-para">Spotify</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/The_Joe_Rogan_Experience_ocqv72.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Joe Rogan Experience</h1>
+                                    <p class="trending-playlist-short-para">Joe Rogan</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/The_Desi_Crime_Podcast_bl9dbf.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Desi Crime Podcast</h1>
+                                    <p class="trending-playlist-short-para">Desi Studios</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Psychology_in_Hindi_z4zfm9.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Psychology in Hindi</h1>
+                                    <p class="trending-playlist-short-para">Saurabh Gandhi</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Joel_Osteen_Podcast_t9cnxm.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Joel Osteen Daily Podcast</h1>
+                                    <p class="trending-playlist-short-para">Joel Osteen</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337440/The_Book_Show_by_RJ_Ananthi_y3eonc.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Book Show</h1>
+                                    <p class="trending-playlist-short-para">RJ Ananthi</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/The_Morgel_Housel_Podcast_yws1co.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Morgan Housel Podcast</h1>
+                                    <p class="trending-playlist-short-para">Morgan Housel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 mt-5 ">
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/Not_your_Type_tmu5qg.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='pd2.html'">Not your Type</h1>
+                                    <p class="trending-playlist-short-para">Not your Type</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/Nitish_Rajput_Podcast_vl5i1v.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head" onclick="window.location.href='pd4.html'">The Nitish Rajput Podcast</h1>
+                                    <p class="trending-playlist-short-para">Nitish Rajput</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/The_Stories_of_Mahabharata_sbbgrf.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Stories of Mahabharata</h1>
+                                    <p class="trending-playlist-short-para">Sudipta Bhawmik</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/Horror_Podcast_Hindi_ab10rf.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Horror Podcast Hindi</h1>
+                                    <p class="trending-playlist-short-para">RJ M Praveen</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337436/The_Mythpat_Podcast_rrunff.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">The Mythpat Podcast</h1>
+                                    <p class="trending-playlist-short-para">Mythilesh Pathankar</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/PBD_Podcast_buts1v.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">PBD Podcast</h1>
+                                    <p class="trending-playlist-short-para">PBD Podcast</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Lex_Fridman_Podcast_gx4yzh.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Lex Fridman Podcast</h1>
+                                    <p class="trending-playlist-short-para">Lex Fridman</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337435/Stories_for_Boujee_wownym.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Stories for Boujee </h1>
+                                    <p class="trending-playlist-short-para">Kids Candle</p>
+                                </div>
+                            </div>
+                            <div class="trending-playlist-short-card d-flex flex-row">
+                                <img src="https://res.cloudinary.com/dwene4tht/image/upload/v1723337434/Mahabharat_With_Dhruv_Rathee_cgvghu.png" class="trending-playlist-short-image"/>
+                                <div>
+                                    <h1 class="trending-playlist-short-head">Mahabharat with Dhruv Rathee</h1>
+                                    <p class="trending-playlist-short-para">Dhruv Rathee</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    
+   
+         </div>
+    </div>
+    <div id="section-explore-premium">
+        <!-- Quick Nav Bar Starts -->
+        <div  class=" harmony-container-navbar d-flex flex-row ">
+            <img src="harmonyX_logo.png" width="60px" height="60px" style="margin-left: 5px; margin-top: 5px;"/>
+            <img src="harmonyX_TEXT_logo.png" height="55px" style="margin-top: 7px;"/>
+            <div class="icon-div d-flex flex-row mr-3">
+                <i class="icon fa-solid fa-xl fa-house"></i>
+                <h1 class=" quick-head ml-2" onclick="window.location.href='harmonyX.html'">HOME</h1>
+            </div>
+
+            <div class="icon-div d-flex flex-row mr-3" onclick="display('section-explore-premium')">
+                <i class="icon fa-brands fa-web-awesome fa-lg"></i>
+                <h1 class=" quick-head ml-2" style="width: 190px;">EXPLORE PREMIUM</h1>
+            </div>
+            <div class="search-box-card">
+                <input class="search-box"  type="text" placeholder="Search">
+            </div>  
+            <div class="profile">
+                <div class="profile-icon-power" onclick="window.location='Login.html'">
+                    <i class=" fa-solid fa-2xl fa-power-off"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Nav Bar Ends -->
+        <div class="harmony-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4" style="margin-left: 0px;">
+                        <div class="premium-page-card">
+                            <div class="d-flex flex-row">
+                                <img class="premium-page-logo" src="harmonyX_logo.png"/>
+                                <h1 class="premium-page-logo-head">Premium</h1>
+                            </div>
+                            <h1 class="premium-page-head-plan">Individual</h1>
+                            <p class="premium-page-para-plan">₹59 for 3 months</p>
+                            <p class="premium-page-para2-plan">₹119 / month after</p>
+                            <hr class="premium-card-hr">
+                            <ul class="premium-page-li">
+                                <li>1 Premium Account</li>
+                                <li>Cancel Anytime</li>
+                                <li style="margin-bottom: 40px;">Subscribe or one-time payment</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="premium-page-button">Get Premium Individual</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="margin-left: 5px;">
+                        <div class="premium-page-card">
+                            <div class="d-flex flex-row">
+                                <img class="premium-page-logo" src="harmonyX_logo.png"/>
+                                <h1 class="premium-page-logo-head">Premium</h1>
+                            </div>
+                            <h1 class="premium-page-head-plan" style="color: #CFF56A;">Mini</h1>
+                            <p class="premium-page-para-plan">₹29 for 1 week</p>
+                            <hr class="premium-card-hr">
+                            <ul class="premium-page-li">
+                                <li>1 mobile-only Premium account</li>
+                                <li>Offline listening of up to 30 songs on 1 device</li>
+                                <li>One-time payment</li>
+                                <li style="margin-bottom: 21px;">Basic audio quality</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="premium-page-button" style="background-color: #CFF56A;">Get Premium Mini</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2" style="margin-left: 5px;">
+                        <div class="premium-page-card">
+                            <div class="d-flex flex-row">
+                                <img class="premium-page-logo" src="harmonyX_logo.png"/>
+                                <h1 class="premium-page-logo-head">Premium</h1>
+                            </div>
+                            <h1 class="premium-page-head-plan" style="color: #A5BBD1;">Family</h1>
+                            <p class="premium-page-para-plan">₹179 for 2 months</p>
+                            <p class="premium-page-para2-plan">₹179 / month after</p>
+                            <hr class="premium-card-hr">
+                            <ul class="premium-page-li">
+                                <li>Up to 6 Premium accounts</li>
+                                <li>Control content marked as explicit</li>
+                                <li>Cancel anytime</li>
+                                <li style="margin-bottom: 0px;">Subscribe or one-time payment</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="premium-page-button" style="background-color: #A5BBD1;">Get Premium Family</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="" style="margin-left: 230px; margin-top: 0px;">
+                            <div class="premium-page-card">
+                                <div class="d-flex flex-row">
+                                    <img class="premium-page-logo" src="harmonyX_logo.png"/>
+                                    <h1 class="premium-page-logo-head">Premium</h1>
+                                </div>
+                                <h1 class="premium-page-head-plan" style="color: #FFC862;">Duo</h1>
+                                <p class="premium-page-para-plan">₹149 for 2 Months</p>
+                                <p class="premium-page-para2-plan">₹149 / month after</p>
+                                <hr class="premium-card-hr">
+                                <ul class="premium-page-li">
+                                    <li>2 Premium accounts</li>
+                                    <li>Cancel anytime</li>
+                                    <li style="margin-bottom: 21px;">Subscribe or one-time payment</li>
+                                </ul>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <button class="premium-page-button" style="background-color: #FFC862;">Get Premium Duo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="margin-left: 40px;">
+                            <div class="premium-page-card">
+                                <div class="d-flex flex-row">
+                                    <img class="premium-page-logo" src="harmonyX_logo.png"/>
+                                    <h1 class="premium-page-logo-head">Premium</h1>
+                                </div>
+                                <h1 class="premium-page-head-plan" style="color: #C4B1D4;">Student</h1>
+                                <p class="premium-page-para-plan">₹59 for 2 months</p>
+                                <p class="premium-page-para2-plan">59 / month after</p>
+                                <hr class="premium-card-hr">
+                                <ul class="premium-page-li">
+                                    <li>1 verified Premium account</li>
+                                    <li>Discount for eligible students</li>
+                                    <li style="margin-bottom: 21px;">Subscribe or one-time payment</li>
+                                </ul>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <button class="premium-page-button" style="background-color: #C4B1D4;">Get Premium Student</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script type="text/javascript" src=" https://new-assets.ccbp.in/frontend/content/static-ccbp-ui-kit/static-ccbp-ui-kit.js"></script>
+    <script src="harmonyX.js"></script>
+    </div>
+</body>
+</html>
